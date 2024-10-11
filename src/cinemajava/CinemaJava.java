@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class CinemaJava {
 
-    // Definir atributos
+    // Definir atributos para la simulacion del cine 
     private Pelicula pelicula;
     private Asientos asientos;
     private Espectador espectador;
@@ -41,6 +41,8 @@ public class CinemaJava {
         System.out.println("Quiere ingresar a la sala de cine? (si - no)");
         String opcion = scanner.nextLine();
 
+        // Permite ejecutar diferentes bloques de codigo es como un if 
+        // el case si ejecuta todo en una
         switch (opcion) {
             case "si":
 
@@ -79,7 +81,7 @@ public class CinemaJava {
 
                 // Inicializar los asientos
                 Asientos asientos = new Asientos();
-                asientos.mostrarAsientos();
+                asientos.mostrarAsientos(); // Muestra la matriz directamente
 
                 // Seleccionar asiento
                 System.out.println("Seleciona un asiento disponible:");
@@ -98,11 +100,12 @@ public class CinemaJava {
                 String opcion_2 = scanner.nextLine();
                 // Para que no se repita el mensaje
 
+                // Mientras el usuario responda si, sigue el proceso de compra
                 while (opcion_2.equals("si")) {
 
-                    // Comprobamos el dinero para otro boleto
+                    // Pregunta nuevamente cuanto dinero tinee
                     System.out.println("¿Cuánto dinero tienes?");
-                    dinero = scanner.nextInt();
+                    dinero = scanner.nextInt(); // Almacena la cantidad
                     // Para que no se repita el mensaje
 
                     System.out.println("El precio de la entrada es: "
@@ -138,15 +141,18 @@ public class CinemaJava {
                     // Para que no se repita el mensaje
                 }
 
+                // Mensaje final despues de la compra
                 System.out.println("Gracias por tu compra. "
                         + "¡Disfruta la película!");
-                break;
+                break; // Termina el caso "si"
 
             case "no":
+                // Si el usuario no quiere entrar al cine, muestra el mensaje
                 System.out.println("Ok, nos vemos otro dia.");
                 break;
 
             default:
+                // Si el usuario no pone una opcion validad, muestra el mensaje
                 System.out.println("Opción no válida,"
                         + " por favor ingresa 'si' o 'no'.");
                 break;

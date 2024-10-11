@@ -4,6 +4,7 @@ public class Espectador {
 
     // lo que ya esta en el ejercicio
     // Definir atributos
+    // le vamos a preguntar y no le ponemos el nombre si no la persona
     private String nombre;
     private Float edad;
     private Double DiDisponible;
